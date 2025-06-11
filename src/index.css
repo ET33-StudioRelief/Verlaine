@@ -1,0 +1,40 @@
+/*Table*/
+.fs-table_cell,
+.fs-table-mobile_cell {
+  border-width: 0px;
+}
+.fs-table_cell.is-grey.is-right {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.fs-table_cell.is-grey.is-left {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.fs-table_row,
+.fs-table-mobile_row {
+  border: 0px;
+}
+.fs-table_table,
+.fs-table-mobile_table {
+  border: 0px;
+}
+.fs-table_header,
+.fs-table-mobile_header {
+  border: 0px;
+}
+
+/*Form*/
+.progress.current {
+  background: #203d83; /* couleur active */
+}
+/*Thanks Page*/
+.user-info-content h3 {
+  color: #203d83;
+  font-weight: bold;
+}
+
+/*Swiper mobile*/
+.swiper-button-prev {
+  display: none !important;
+}
