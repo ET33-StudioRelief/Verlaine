@@ -1,4 +1,4 @@
-interface FormData {
+/*interface FormData {
   prenom: string;
   nom: string;
   codePostal: string;
@@ -106,3 +106,4 @@ const getValueFromForm = (form: HTMLFormElement, id: string): string => {
   const element: HTMLInputElement | null = form.querySelector(`#${id}`);
   return element ? element.value : '';
 };
+*/
