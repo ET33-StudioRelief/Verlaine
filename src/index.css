@@ -30,11 +30,35 @@
 }
 /*Thanks Page*/
 .user-info-content h3 {
-  color: #203d83;
+  color: #203d83 !important;
   font-weight: bold;
 }
 
 /*Swiper mobile*/
 .swiper-button-prev {
   display: none !important;
+}
+@media (min-width: 991px) and (max-width: 1100px) {
+  .pricing_top-content {
+    height: auto;
+  }
+  .pricing_number {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1115px) {
+  .hero_list {
+    max-width: 25rem;
+  }
+}
+@media (min-width: 991px) and (max-width: 1128px) {
+  .pricing_text-content .button-group .button {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 991px) and (max-width: 1210px) {
+  .step_txt-cnt {
+    height: auto;
+  }
 }

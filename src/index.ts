@@ -1,6 +1,6 @@
 import './index.css';
 
-//import { initFormHandling } from './utils/form';
+import { initFormHandling } from './utils/form';
 import {
   animateFaqItems,
   animatePricingFeatures,
@@ -13,7 +13,7 @@ import { initTableSwiper } from './utils/swiper';
 // Initialiser la gestion du formulaire
 window.Webflow ||= [];
 window.Webflow.push(() => {
-  /*initFormHandling();*/
+  initFormHandling();
   animatePricingTable();
   animateSummarizeCards();
   animateFaqItems();
