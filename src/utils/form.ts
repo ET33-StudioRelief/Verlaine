@@ -36,9 +36,7 @@ export const initFormHandling = (): void => {
       });
     });
   } else {
-    // Page de remerciements
     const userInfo: HTMLElement | null = document.getElementById('user-info');
-
     if (userInfo) {
       const storedData: string | null = localStorage.getItem('formData');
       const formData: FormData | null = storedData ? JSON.parse(storedData) : null;
