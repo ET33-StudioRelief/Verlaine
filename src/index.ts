@@ -8,6 +8,7 @@ import {
   animatePricingTable,
   animateSummarizeCards,
 } from './utils/gsap';
+import { initPopupFormHandling } from './utils/popup';
 import { initTableSwiper } from './utils/swiper';
 
 // Initialiser la gestion du formulaire
@@ -20,4 +21,5 @@ window.Webflow.push(() => {
   animatePricingGrid();
   animatePricingFeatures();
   initTableSwiper();
+  initPopupFormHandling();
 });

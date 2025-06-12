@@ -5,6 +5,7 @@ interface FormData {
   ville: string;
   email: string;
   telephone: string;
+  typeprojet: string;
 }
 
 interface FormLabels {
@@ -50,6 +51,7 @@ export const initFormHandling = (): void => {
           ville: 'Ville',
           email: 'Email',
           telephone: 'Téléphone',
+          typeprojet: 'Type de projet',
         };
 
         // Générer le HTML pour chaque information disponible
@@ -74,11 +76,7 @@ export const initFormHandling = (): void => {
         // Nettoyer le localStorage après affichage
         localStorage.removeItem('formData');
       } else {
-        userInfo.innerHTML = `
-                    <div class="user-info-content">
-                        <em>Aucune information trouvée</em>
-                    </div>
-                `;
+        userInfo.innerHTML = '';
       }
     }
   }
@@ -93,6 +91,7 @@ const collectAndStoreFormData = (form: HTMLFormElement): void => {
     ville: getValueFromForm(form, 'form-ville'),
     email: getValueFromForm(form, 'form-email'),
     telephone: getValueFromForm(form, 'form-phone'),
+    typeprojet: getValueFromForm(form, 'form-type-projet'),
   };
 
   // Stocker uniquement si au moins un champ est rempli
