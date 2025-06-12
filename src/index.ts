@@ -16,12 +16,12 @@ window.Webflow ||= [];
 window.Webflow.push(() => {
   initFormHandling();
   initPopupFormHandling();
-  animatePricingTable();
   animateSummarizeCards();
   animateFaqItems();
   animatePricingGrid();
   if (window.location.pathname === '/') {
     animatePricingFeatures();
+    animatePricingTable();
   }
   initTableSwiper();
 });

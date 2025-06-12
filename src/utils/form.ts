@@ -23,6 +23,50 @@ export const initFormHandling = (): void => {
     );
 
     forms.forEach((form: HTMLFormElement) => {
+      // Validation sur le bouton "Étape suivante" (première étape)
+      const nextBtn = form.querySelector('[data-form="next-btn"]');
+      if (nextBtn) {
+        nextBtn.addEventListener(
+          'click',
+          (e) => {
+            const prenom = form.querySelector<HTMLInputElement>('#form-prenom');
+            const nom = form.querySelector<HTMLInputElement>('#form-nom');
+            const cp = form.querySelector<HTMLInputElement>('#form-cp');
+            const ville = form.querySelector<HTMLInputElement>('#form-ville');
+
+            if (!prenom || prenom.value.trim().length < 2) {
+              alert('Le prénom doit contenir au moins 2 lettres.');
+              prenom?.focus();
+              e.preventDefault();
+              e.stopImmediatePropagation();
+              return false;
+            }
+            if (!nom || nom.value.trim().length < 2) {
+              alert('Le nom doit contenir au moins 2 lettres.');
+              nom?.focus();
+              e.preventDefault();
+              e.stopImmediatePropagation();
+              return false;
+            }
+            if (!cp || !/^[0-9]{5}$/.test(cp.value.trim())) {
+              alert('Le code postal doit contenir exactement 5 chiffres.');
+              cp?.focus();
+              e.preventDefault();
+              e.stopImmediatePropagation();
+              return false;
+            }
+            if (!ville || ville.value.trim().length < 2) {
+              alert('La ville doit contenir au moins 2 lettres.');
+              ville?.focus();
+              e.preventDefault();
+              e.stopImmediatePropagation();
+              return false;
+            }
+          },
+          true
+        );
+      }
+
       // Écouteur sur le bouton de soumission
       const submitButton: HTMLInputElement | null = form.querySelector('input[type="submit"]');
       if (submitButton) {
