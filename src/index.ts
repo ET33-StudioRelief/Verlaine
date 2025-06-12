@@ -15,11 +15,13 @@ import { initTableSwiper } from './utils/swiper';
 window.Webflow ||= [];
 window.Webflow.push(() => {
   initFormHandling();
+  initPopupFormHandling();
   animatePricingTable();
   animateSummarizeCards();
   animateFaqItems();
   animatePricingGrid();
-  animatePricingFeatures();
+  if (window.location.pathname === '/') {
+    animatePricingFeatures();
+  }
   initTableSwiper();
-  initPopupFormHandling();
 });
